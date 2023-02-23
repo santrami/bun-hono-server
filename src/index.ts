@@ -8,7 +8,7 @@ const app = new Hono();
 app.use('/favicon.ico', serveStatic({ path: './public/favicon.ico' }));
 
 app.get("/", (c) => {
-  return c.json({ message: "Hello World!" });
+  return c.json({ message: "Hello World again!" });
 });
 
 console.log(`Running at http://localhost:${port}`);
