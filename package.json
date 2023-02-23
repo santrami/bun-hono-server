@@ -10,5 +10,5 @@
   "scripts": {
     "start": "bun run src/index.ts"
   },
-  "module": "src/index.js"
+  "module": "src/index.js "
 }

@@ -1,5 +1,12 @@
 import { Hono } from "hono";
 import { serveStatic } from 'hono/serve-static.bun';
+import { Database } from "bun:sqlite";
+
+const db= new Database('mydb.sqlite');
+
+db.run(
+  "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, username TEXT, password TEXT)",
+);
 
 const port = parseInt(process.env.PORT) || 3000;
 
